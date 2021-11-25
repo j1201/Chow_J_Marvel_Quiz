@@ -1,24 +1,22 @@
 from gameComponents import gameVars
 
-def choiceCompare():
+def total(point):
 
-    for x in range(4):
+        if point == 0:
+            print("Sorry, I have no idea")
 
-        # Print question
-        print("\nLv", gameVars.questNum,"question: ", gameVars.questions[x])
-        gameVars.choices = input("Iron Man, Bucky, Captain Marvel, Vision (Case-sensitive): ")
+        elif point <= 1:
+            gameVars.characters = gameVars.characters[0]
 
-        #Print player's choice
-        print("Player's answer: " + gameVars.choices)
+            print("It's " + gameVars.characters)
 
-        #Compare answer
-        if gameVars.choices == gameVars.answers[x]:
-            print("correct! gain", x+1, "pt!")
-            gameVars.point = gameVars.point + x+1
+        elif point <= 2:
+            gameVars.characters = gameVars.characters[1]
 
-        else:
-            print("wrong! no pt!")
+            print("It's " + gameVars.characters)
 
-        print("Player's points: " + str(gameVars.point) + "\n")
+        elif point <= 3:
+            gameVars.characters = gameVars.characters[2]
 
-        gameVars.questNum = gameVars.questNum + 1 
+            print("It's " + gameVars.characters)
+
