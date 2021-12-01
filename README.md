@@ -1,7 +1,7 @@
 ## Marvel Quiz - Python text-based interactive game!
 
 Think of a Marvel character and I will try to guess who the character is 
-![Marvel Characters](/images/marvel_character.jpg)
+![Marvel Characters](images/marvel_character.jpg)
 
 ### Prerequisites
 
