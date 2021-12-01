@@ -35,3 +35,8 @@ def total(point):
             print("It's " + gameVars.characters)
             bw = Image.open("images/black_widow.jpg")
             bw.show()
+
+        elif point <= 5:
+            print("Character not exist")
+            uk = Image.open("images/unknown.jpg")
+            uk.show()

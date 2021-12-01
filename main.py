@@ -1,8 +1,16 @@
 from gameComponents.gameQuestions import questions
 from gameComponents import gameRun, gameVars , compare
+from rich.console import Console
+from rich.style import Style
 
-print("Welcome to the Marvel Quiz Game!")
-print("Think about a Marvel Character & I will try to guess who the character is\n")
+console = Console()
+
+base_style = Style.parse("bold white on red")
+red_console = Console(style="bold red")
+
+console.print(":superhero: Welcome to the Marvel Quiz Game! :superhero:" , style = base_style)
+print("═════════════════════════════════════════ \n═════┌─┐┌─┐┌───┐┌───┐┌┐══┌┐┌───┐┌┐═══════ \n═════││└┘│││┌─┐││┌─┐││└┐┌┘││┌──┘││═══════ \n═════│┌┐┌┐│││═│││└─┘│└┐││┌┘│└──┐││═══════ \n═════│││││││└─┘││┌┐┌┘═│└┘│═│┌──┘││═┌┐════ \n═════│││││││┌─┐││││└┐═└┐┌┘═│└──┐│└─┘│════ \n═════└┘└┘└┘└┘═└┘└┘└─┘══└┘══└───┘└───┘════ \n═════════════════════════════════════════")
+console.print("Think about a Marvel Character & I will try to guess who the character is! \n" , style="bold blink")
 
 while gameVars.player is False:
 
@@ -12,13 +20,13 @@ while gameVars.player is False:
 
     compare.total(gameVars.pointTotal)
 
-    playAgain = input("Do you want to play again? yes/no :")
+    playAgain = red_console.input("Do you want to play again? y/n :")
 
-    if playAgain == "no":
-        print("See ya!")
+    if playAgain == "n":
+        console.print("See ya!:waving_hand: \n")
         exit ()
-    elif playAgain == "yes":
-        print("=================\n")
+    elif playAgain == "y":
+        console.print("Another Round \n" , style = base_style)
         gameVars.pointTotal = 0
         gameVars.player = False
 
