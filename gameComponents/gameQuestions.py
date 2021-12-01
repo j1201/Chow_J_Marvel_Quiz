@@ -1,23 +1,29 @@
 questions = {
     "q1" : {
-        "question": "Do you come from earth? ",
+        "question": "Do you come from earth? yes/no: ",
         "yes" : 1,
         "no" : 0
     },
     "q2" : {
-        "question": "Are you a member of Avengers? ",
+        "question": "Are you a member of Avengers? yes/no: ",
         "yes" : 1,
         "no" : 0
     },
 
     "q3" : {
-        "question": "Do you have innate superpower? ",
+        "question": "Do you have innate superpower? yes/no: ",
         "yes" : 1,
         "no" : 0
     },
 
     "q4" : {
-        "question": "Were you killed in the final battle with Thanos? ",
+        "question": "Were you killed in the final battle with Thanos? yes/no: ",
+        "yes" : 1,
+        "no" : 0
+    },
+
+    "q5" : {
+        "question": "Are you a female character? yes/no: ",
         "yes" : 1,
         "no" : 0
     },
